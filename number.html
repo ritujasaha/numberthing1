@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title> RITUJA'S CODE</title>
+        <script>
+            function prime ()
+            {
+                let a=0,i,c=0;
+                a= Number(document.getElementById("a").value);
+                for (i=1;i<=a;i++)
+                {
+                    if (a%i==0)
+                    c++;
+                }
+                if (c==2)
+                document.getElementById("result").innerHTML="The Number entered is Prime.";
+                else
+                document.getElementById("result").innerHTML="The Number entered is Not Prime.";
+            }
+            function perfectsquare()
+            {
+                let a=0,i,s=0;
+                a= Number(document.getElementById("a").value);
+                for (i=1;i<=a;i++)
+            {
+                if(i*i==a)
+                s=1;
+            }
+            if (s==1)
+                document.getElementById("result").innerHTML="The Number entered is a Perfect Square.";
+                else 
+                document.getElementById("result").innerHTML="The Number entered is not a Perfect Square.";           
+            }
+            function palindrome()
+            {
+                let a=0,i,rev=0,d;
+                a= Number(document.getElementById("a").value);
+                i=a;
+                while(i!=0)
+                {
+                    d=i%10;
+                    rev= rev*10+d;
+                    i=Math.floor(i/10);
+                }
+                if (a==rev)
+                document.getElementById("result").innerHTML="The Number entered is a Palindromic Number.";
+                else 
+                document.getElementById("result").innerHTML="The Number entered is not a Palindromic Number.";           
+            }
+            
+        </script>
+    </head>
+    <body bgcolor="Black">
+        <center>
+            <font face="Times New Roman" color="white">
+        <h1>DIGIT REVIEWING</h1>
+        <br>
+        <p>ENTER A NUMBER</p>
+        <input type="number" id="a">
+        <br>
+        <br>
+        <button onclick="prime()">PRIME</button> 
+        <br>
+        <br>
+        <button onclick="palindrome()">PALINDROME</button>
+        <br>
+        <br>
+        <button onclick="perfectsquare()">PERFECT SQUARE</button>
+        <br>
+        <br>
+        <br>
+        <div id="result">RESULT APPEARS HERE:</div>
+        </center>
+    </font>
+    </body>
+</html>
